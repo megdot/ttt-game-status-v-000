@@ -18,19 +18,6 @@ WIN_COMBINATIONS = [
 board = ["X", "X", "X", "O", " ", "O", "O", " ", " "]
 camel = [8, " ", " ", " ", 8, " ", " ", " ", 8]
 
-#board.select {|i| board[i] == "X"}
-
-#board_indices = board.length.times.select {|i| board[i] == "X" || board[i] == "O"}
-#board_indices
-#board_guy = board.each_index.select {|i| board[i] == "X" || board[i] == "O"}
-#board_guy
-=begin
-position_1 = board[0..2]
-if position_taken?(board, 0..2)
-  puts "Hello World"
-end
-=end
-
 def won?(board)
 winner = []
 empty_board = board.all? {|x| x == " "}
