@@ -14,3 +14,16 @@ WIN_COMBINATIONS = [
   [0,4,8], #Left start diagonal
   [2,4,6]  #Right start diagonal
 ]
+
+def won?(board)
+winner = []
+empty_board = board.all? {|x| x == " "}
+WIN_COMBINATIONS.each do |sub_array|
+    if empty_board || full?(board)
+      return false
+    elsif sub_array.all? { |value| board[value] =="X" } || sub_array.all? { |value| board[value] =="O" }
+      winner = sub_array
+    end
+  end
+  winner
+end
